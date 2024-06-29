@@ -28,7 +28,7 @@
     "packages/ui"
   ],
   "scripts": {
-    "postinstall": "./scripts/link-workspaces.sh",
+    "postinstall": "bash ./scripts/link-workspaces.sh",
     "clean": "npm-run-all --parallel clean:*",
     "clean:common": "npm run -w packages/common clean",
     "clean:schemas": "npm run -w packages/schemas clean",
@@ -61,5 +61,9 @@
     "ts-loader": "^9.2.5",
     "ts-prune": "^0.10.3",
     "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "ts-node": "^10.9.2"
   }
 }
